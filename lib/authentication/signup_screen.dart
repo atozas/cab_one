@@ -15,6 +15,8 @@ class SignUpScreen extends StatefulWidget {
   _SignUpScreenState createState() => _SignUpScreenState();
 }
 
+
+
 class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController nameTextEditingController = TextEditingController();
   TextEditingController emailTextEditingController = TextEditingController();
@@ -47,6 +49,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         });
 
     /// save driver details to authentication
+
     final User? firebaseUser = (await fAuth
             .createUserWithEmailAndPassword(
       email: emailTextEditingController.text.trim(),
